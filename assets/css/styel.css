@@ -1,17 +1,32 @@
+@import 'media_query_css.css';
 *{
     outline: 0;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
+.avatar img{
+    width: 600px;
+    border-radius: 33px;
+}
 
 .about_me{
     padding-top: 120px;
     padding-bottom: 120px;
 }
 
-.avatar img{
-    width: 400px;
-    border-radius: 33px;
+.about_me .grid{
+    align-items: center;
+}
+.about_me_text{
+    font-size: 24px;
+}
+
+
+.skills{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
 }
