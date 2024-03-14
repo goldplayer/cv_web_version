@@ -4,29 +4,62 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
 }
 
-.avatar img{
-    width: 600px;
+
+.calc{
+    width: 200px;
+}
+
+.calc .input_group{
+    width: 100%;
+    /* margin-bottom: 10px; */
+}
+
+.calc .input_group  input{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid red;
     border-radius: 33px;
+    padding-left: 10px;
 }
 
-.about_me{
-    padding-top: 120px;
-    padding-bottom: 120px;
+.btn_group{
+    display: flex;
+    margin-top: 20px;
+}
+.plus, .minus, .multi, .delimeter{
+    width: 50%;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
 }
 
-.about_me .grid{
-    align-items: center;
-}
-.about_me_text{
-    font-size: 24px;
+.plus{
+    background-color: green;
+    margin-right: 10px;
 }
 
+.minus{
+    margin-left: 10px;
+    background-color: red;
+}
 
-.skills{
-    padding-top: 120px;
-    padding-bottom: 120px;
-    text-align: center;
+.multi{
+    background-color: blue;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.delimeter{
+    background-color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.btn_full{
+    margin-top: 30px;
+    width: 100%;
 }

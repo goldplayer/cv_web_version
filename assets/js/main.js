@@ -1,27 +1,47 @@
-var canvas = document.getElementById('myCanvas');
-    var ctx = canvas.getContext('2d');
-    var img = new Image();
-    img.src = 'assets/img/avatar_img.jpg'; // Замените на путь к вашему изображению
+'use_strict';
 
-    img.onload = function() {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        animate();
-    };
+const resultCalculation = document.getElementById('answer');
+const FirstNumber = document.getElementById('first_number');
+const SecondNumber = document.getElementById('second_number');
+const submitBtn = document.getElementById('submit');
+const plusbtn = document.getElementById('plus');
+const minusbtn = document.getElementById('minus');
+// const multibtn = document.getElementById('multi');
+// const delimeterbtn = document.getElementById('delimeter');
 
-    var scale = 1;
-    var direction = 1;
+let action = '+';
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.save();
-        ctx.translate(canvas.width / 2, canvas.height / 2);
-        ctx.scale(scale, scale);
-        ctx.drawImage(img, -img.width / 2, -img.height / 2);
-        ctx.restore();
 
-        scale += direction * 0.0001;
-        if (scale <= 1 || scale >= 1.2) direction *= -1; // Изменяйте эти значения для разных эффектов
+plusbtn.addEventListener('click', function(event){
+    event.preventDefault();
+    action = '+';
+});
 
-        requestAnimationFrame(animate);
+minusbtn.addEventListener('click', function(event){
+    event.preventDefault();
+    action='-'
+});
+
+// multibtn.onclick = function(){
+//     action = '*'
+// }
+
+// delimeterbtn.onclick = function(){
+//     action = '/'
+// }
+
+
+submitBtn.addEventListener('click', function(event){
+    event.preventDefault();
+
+    if(action == '+'){
+        const sum = Number(FirstNumber.value) + Number(SecondNumber.value)
+        resultCalculation.textContent = sum;
     }
+
+    if(action == '-'){
+        const sum  = Number(FirstNumber.value) - Number(SecondNumber.value)
+        resultCalculation.textContent = sum;
+    }
+});
+
